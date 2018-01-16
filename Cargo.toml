@@ -1,0 +1,27 @@
+[package]
+name = "ghc-rts-rs"
+version = "0.0.1"
+authors = ["Michael Gattozzi <mgattozzi@gmail.com>"]
+build = "build.rs"
+description = "Link in the Haskell Runtime to run Haskell inside Rust"
+documentation = "https://docs.rs/ghc-rts-rs"
+homepage = "https://github.com/mgattozzi/ghc-rts-rs"
+repository = "https://github.com/mgattozzi/ghc-rts-rs"
+readme = "README.md"
+keywords = ["Haskell", "RTS", "FFI"]
+categories = [
+]
+license = "MIT/Apache-2.0"
+exclude = ["src/ghc-8.2.2/"]
+
+[lib]
+name = "ghc_rts"
+crate-type = ["rlib"]
+
+[dependencies]
+libc = "0.2.36"
+
+[build-dependencies]
+walkdir = "2.0.1"
+duct = "0.9.2"
+cabal-rs = "0.0.1"

@@ -1,0 +1,8 @@
+/target/
+**/*.rs.bk
+Cargo.lock
+
+src/ghc-8.2.2/*
+htest/dist/*
+htest/.stack-work/*
+htest/src/Lib.dump-hi
